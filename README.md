@@ -12,15 +12,13 @@ Run the following commands:
 
 2. `bvm install`
 
-3. `bit login`
+3. `git clone git@github.com:teambit/getting-started-result.git try-bit`
 
-4. `git clone git@github.com:teambit/getting-started-result.git try-bit`
+4. `cd try-bit`
 
-5. `cd try-bit`
+5. `bit install`
 
-6. `bit install`
-
-7. `bit start`
+6. `bit start`
 
 Explore the workspace at http://localhost:3000/
 
