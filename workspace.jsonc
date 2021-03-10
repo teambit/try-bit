@@ -15,7 +15,7 @@
     // The default directory for all components in the workspace.
     "defaultDirectory": "{scope}/{name}",
     /*
-      The default scope for all components in workspace.
+      The default scope for all components in the workspace.
       https://harmony-docs.bit.dev/scope/set-up-remote-scope
      */
     "defaultScope": "our-org.tech-jokes"
@@ -51,13 +51,6 @@
        * https://harmony-docs.bit.dev/react/overview
        **/
       "teambit.react/react": {}
-    },
-    "ui/elements": {
-      /**
-       * All components under the ui/elements directory are set to use 'our-org.design-system' scope (instead of 'our-org.tech-jokes')
-       * and will be exported to https://bit.dev/our-org/design-system.
-       **/
-      "defaultScope": "our-org.design-system"
     }
   }
 }
