@@ -1,0 +1,34 @@
+---
+description: A React hook that fetches Jokes
+---
+
+import { useEffect } from 'react';
+import { Button } from '@our-org/tech-jokes.ui.elements.button';
+import { useRemoteJokes } from './use-remote-jokes';
+import styles from './use-remote-jokes-docs.module.scss';
+
+1. A function that retrieves a joke from a remote API `() => Promise<void>`
+2. The retrieved joke `string`
+3. A boolean that signifies whether the fetch promise has been resolved `boolean`
+4. An error message `string`
+
+```jsx live
+() => {
+  const [getJoke, joke, isLoading, error] = useRemoteJokes();
+
+  useEffect(() => {
+    getJoke();
+  }, []);
+
+  return (
+    <div className={styles.contentWrapper}>
+      {error || joke}
+      <div className={styles.buttonsWrapper}>
+        <Button variant="secondary" isLoading={isLoading} onClick={getJoke}>
+          {'another joke'}
+        </Button>
+      </div>
+    </div>
+  );
+};
+```

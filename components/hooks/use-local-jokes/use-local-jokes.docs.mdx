@@ -1,0 +1,48 @@
+---
+description: A React hook that manages Jokes in the local storage
+---
+
+import { useEffect } from 'react';
+import { Button } from '@our-org/tech-jokes.ui.elements.button';
+import { useLocalJokes } from './use-local-jokes';
+import styles from './use-local-jokes-docs.module.scss';
+
+### The 'use-local-jokes' retrieves the following:
+
+1. A function that retrieves a joke from the localStorage `() => void`
+2. The retrieved joke `string`
+3. An error message `string`
+4. A function that saves a joke in the localStorage `(joke: string, callback?: () => any) => void`
+5. A function that removes a joke from the localStorage `(joke: string, callback?: () => any) => void`
+
+```jsx live
+() => {
+  const [getJoke, joke, error, saveJoke, removeJoke] = useLocalJokes();
+
+  const jokeExample = 'knock knock...';
+
+  useEffect(() => {
+    getJoke();
+  }, []);
+
+  return (
+    <div className={styles.contentWrapper}>
+      {error || joke}
+      <div className={styles.buttonsWrapper}>
+        <Button variant="secondary" disabled={!!error} onClick={getJoke}>
+          {'next joke'}
+        </Button>
+        <Button
+          variant="secondary"
+          onClick={() => saveJoke(jokeExample, getJoke)}
+        >
+          {'save joke'}
+        </Button>
+        <Button onClick={() => removeJoke(joke, getJoke)}>
+          {'remove joke'}
+        </Button>
+      </div>
+    </div>
+  );
+};
+```

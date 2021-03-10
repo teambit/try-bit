@@ -1,35 +1,33 @@
-/**
- * this is the main configuration file of your bit workspace.
- * for full documentation, please see: https://docs.bit.dev/configuration
- **/ {
+/*
+ This is where your workspace and Bit extensions used by it, are configured.
+ https://harmony-docs.bit.dev/workspace/configurations
+ */ {
   "$schema": "https://static.bit.dev/teambit/schemas/schema.json",
-  /**
-   * main configuration of the Bit workspace.
-   **/
+
+  // Configurations for the workspace.
   "teambit.workspace/workspace": {
-    /**
-     * the name of the component workspace. used for development purposes.
-     **/
+    // The workspace name -  will be displayed in the Workspace UI.
     "name": "tech-jokes",
-    /**
-     * set the icon to be shown on the Bit server.
-     **/
+
+    // The workspace icon -  will be displayed in the Workspace UI.
     "icon": "https://image.flaticon.com/icons/svg/185/185034.svg",
-    /**
-     * default directory for all components in workspace.
-     **/
+
+    // The default directory for all components in the workspace.
     "defaultDirectory": "{scope}/{name}",
-    /**
-     * default scope for all components in workspace.
-     **/
+    /*
+      The default scope for all components in workspace.
+      https://harmony-docs.bit.dev/scope/set-up-remote-scope
+     */
     "defaultScope": "our-org.tech-jokes"
   },
-  /**
-   * main configuration for component dependency resolution.
-   **/
+  /*
+    Configurations for component dependency resolution.
+    https://harmony-docs.bit.dev/workspace/configurations
+   */
   "teambit.dependencies/dependency-resolver": {
-    /**
-     * choose the package manager for Bit to use. you can choose between 'yarn', 'pnpm'
+    /*
+      Choose the package manager for Bit to use.
+      https://harmony-docs.bit.dev/dependencies/package-managers
      */
     "packageManager": "teambit.dependencies/pnpm",
     "policy": {
@@ -40,20 +38,26 @@
       }
     }
   },
-  /**
-   * workspace variants allow to set different subsets of configuration for components in your workspace.
-   * this is extremely useful for upgrading, aligning and building components with a
-   * new set of dependencies.
-   **/
+  /*
+    The 'Variant' extension enables a cascading, CSS-like, selection of components in the workspace configuration.
+    It provides order and simplicity to the way we apply rules and settings to large number of independent components - all in a single workspace.
+    https://harmony-docs.bit.dev/workspace/cascading-rules
+   */
   "teambit.workspace/variants": {
-    /**
-     * "*" is a special rule which applied on all components in the workspace.
-     **/
+    // "*" selects all components in the workspace.
     "*": {
       /**
-       * uncomment to apply the react environment on all components.
+       * All components will use Bit's React development environment.
+       * https://harmony-docs.bit.dev/react/overview
        **/
-      // "teambit.react/react": { }
+      "teambit.react/react": {}
+    },
+    "ui/elements": {
+      /**
+       * All components under the ui/elements directory are set to use 'our-org.design-system' scope (instead of 'our-org.tech-jokes')
+       * and will be exported to https://bit.dev/our-org/design-system.
+       **/
+      "defaultScope": "our-org.design-system"
     }
   }
 }

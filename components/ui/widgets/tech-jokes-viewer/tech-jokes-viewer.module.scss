@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+.contentWrapper {
+  margin-bottom: 50px;
+  height: 200px;
+  overflow-y: scroll;
+  font-family: 'Indie Flower', cursive;
+  line-height: 1.5;
+  font-size: 22px;
+}
+
+.buttonsWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  width: 500px;
+}
