@@ -7,7 +7,7 @@
   // Configurations for the workspace.
   "teambit.workspace/workspace": {
     // The workspace name -  will be displayed in the Workspace UI.
-    "name": "tech-jokes",
+    "name": "bit-demo-workspace",
 
     // The workspace icon -  will be displayed in the Workspace UI.
     "icon": "https://image.flaticon.com/icons/svg/185/185034.svg",
