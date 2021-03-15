@@ -3,7 +3,6 @@ description: A React hook that manages Jokes in the local storage
 ---
 
 import { useEffect } from 'react';
-import { Button } from '@our-org/tech-jokes.ui.elements.button';
 import { useLocalJokes } from './use-local-jokes';
 import styles from './use-local-jokes-docs.module.scss';
 
@@ -29,18 +28,18 @@ import styles from './use-local-jokes-docs.module.scss';
     <div className={styles.contentWrapper}>
       {error || joke}
       <div className={styles.buttonsWrapper}>
-        <Button variant="secondary" disabled={!!error} onClick={getJoke}>
+        <button className={styles.button} disabled={!!error} onClick={getJoke}>
           {'next joke'}
-        </Button>
-        <Button
+        </button>
+        <button className={styles.button} 
           variant="secondary"
           onClick={() => saveJoke(jokeExample, getJoke)}
         >
           {'save joke'}
-        </Button>
-        <Button onClick={() => removeJoke(joke, getJoke)}>
+        </button>
+        <button className={styles.button}  onClick={() => removeJoke(joke, getJoke)}>
           {'remove joke'}
-        </Button>
+        </button>
       </div>
     </div>
   );

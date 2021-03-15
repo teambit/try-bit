@@ -14,7 +14,11 @@ export const ToggleBetweenRemoteAndLocal = () => {
   return (
     <div>
       <div>
-        <button onClick={() => setIsLocal((prev) => !prev)}>
+        <button
+          className={styles.button}
+          data-testid="toggle-button"
+          onClick={() => setIsLocal((prev) => !prev)}
+        >
           Toggle between 'local' and 'remote'
         </button>
       </div>
@@ -40,8 +44,9 @@ const GetJokes = ({ local = false }) => {
 
   return (
     <div className={styles.example}>
-      <h4>{local ? '[LOCAL]' : '[REMOTE]'}</h4>
-      <div className={styles.contentWrapper}>{error || joke}</div>
+      <div data-testid="jokes-container" className={styles.contentWrapper}>
+        {error || joke}
+      </div>
     </div>
   );
 };

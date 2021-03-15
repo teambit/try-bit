@@ -24,5 +24,8 @@
   cursor: pointer;
   &:hover {
     background-color: #6d7faf;
+    &:active{
+      background-color: #b3b7c4;
+    }
   }
 }

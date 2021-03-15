@@ -24,9 +24,10 @@ import styles from './use-remote-jokes-docs.module.scss';
     <div className={styles.contentWrapper}>
       {error || joke}
       <div className={styles.buttonsWrapper}>
-        <Button variant="secondary" isLoading={isLoading} onClick={getJoke}>
+        <button
+          className={styles.button} isLoading={isLoading} onClick={getJoke}>
           {'another joke'}
-        </Button>
+        </button>
       </div>
     </div>
   );

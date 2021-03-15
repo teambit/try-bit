@@ -1,3 +1,7 @@
+.example {
+  max-width: 400px;
+}
+
 .contentWrapper {
   margin-bottom: 50px;
 }
@@ -7,6 +11,21 @@
   justify-content: space-between;
 }
 
-.minWidth {
-  min-width: 450px;
+.button {
+  background-color: #4c66af;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  &:hover {
+    background-color: #6d7faf;
+        &:active{
+          background-color: #b3b7c4;
+        }
+  }
 }

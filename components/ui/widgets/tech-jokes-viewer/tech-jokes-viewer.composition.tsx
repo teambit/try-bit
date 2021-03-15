@@ -23,7 +23,7 @@ export const ToggleBetweenRemoteAndLocalJokes = () => {
 
 export const RemoteJokes = () => {
   return (
-    <div>
+    <div data-testid="remote-jokes">
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <TechJokesViewer local={false} />
       </div>
@@ -33,7 +33,7 @@ export const RemoteJokes = () => {
 
 export const LocalJokes = () => {
   return (
-    <div>
+    <div data-testid="local-jokes">
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <TechJokesViewer local={true} />
       </div>

@@ -1,17 +1,14 @@
 /*
  This is where your workspace and Bit extensions used by it, are configured.
  https://harmony-docs.bit.dev/workspace/configurations
- */ {
+ */{
   "$schema": "https://static.bit.dev/teambit/schemas/schema.json",
-
   // Configurations for the workspace.
   "teambit.workspace/workspace": {
     // The workspace name -  will be displayed in the Workspace UI.
     "name": "bit-demo-workspace",
-
     // The workspace icon -  will be displayed in the Workspace UI.
     "icon": "https://image.flaticon.com/icons/svg/185/185034.svg",
-
     // The default directory for all components in the workspace.
     "defaultDirectory": "{scope}/{name}",
     /*
@@ -31,12 +28,20 @@
      */
     "packageManager": "teambit.dependencies/pnpm",
     "policy": {
-      "dependencies": {},
+      "dependencies": {
+        "@testing-library/jest-dom": "5.11.9",
+        "@testing-library/react": "11.2.5"
+      },
       "peerDependencies": {
         "react": "16.13.1",
         "react-dom": "16.13.1"
       }
-    }
+    },
+    "packageManagerArgs": [],
+    "devFilePatterns": [
+      "**/*.spec.ts"
+    ],
+    "strictPeerDependencies": true
   },
   /*
     The 'Variant' extension enables a cascading, CSS-like, selection of components in the workspace configuration.

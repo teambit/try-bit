@@ -11,8 +11,10 @@ const logoImg =
 
 export const AppBarWithLogo = () => {
   return (
-    <AppBar items={menuItems}>
-      <img style={{ height: '26px' }} src={logoImg}></img>
-    </AppBar>
+    <div data-testid="app-bar">
+      <AppBar items={menuItems}>
+        <img style={{ height: '26px' }} src={logoImg}></img>
+      </AppBar>
+    </div>
   );
 };
