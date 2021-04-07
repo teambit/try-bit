@@ -1,7 +1,7 @@
 import React, { ButtonHTMLAttributes } from 'react';
 import cs from 'classnames';
 import { DotsLoader } from '@teambit/teaching.ui.elements.dots-loader';
-import styles from './button.module.scss'
+import styles from './button.module.scss';
 
 export type ButtonProps = {
   /**

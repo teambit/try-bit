@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Button } from '@our-org/tech-jokes.ui.elements.button';
 import { useJokes } from '@our-org/tech-jokes.hooks.use-jokes';
 
-const styles = require('./tech-jokes-viewer.module.scss');
+import styles from'./tech-jokes-viewer.module.scss';
 
 export type BadJokesProps = {
   local: boolean;

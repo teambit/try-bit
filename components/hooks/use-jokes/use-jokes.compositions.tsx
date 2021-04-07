@@ -4,7 +4,7 @@
 import React, { useEffect, useState } from 'react';
 import { useJokes } from './use-jokes';
 
-const styles = require('./use-jokes-docs.module.scss');
+import styles from './use-jokes-docs.module.scss';
 
 // This composition validates that the 'use-jokes' allows to toggle between stored jokes and remote jokes.
 // That's our way to ensure we deliver a component than behaves "as promised" when consumed by others.

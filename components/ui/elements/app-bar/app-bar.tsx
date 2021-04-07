@@ -1,6 +1,6 @@
 import React, { ReactNode, useState } from 'react';
 
-const styles = require('./app-bar.module.scss');
+import styles from './app-bar.module.scss';
 
 export type AppBarProps = {
   /** App-bar items -  each consists of a label and an action to execute when selected. */
