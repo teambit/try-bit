@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
-const styles = require('./dots-loader.module.scss');
+import styles from'./dots-loader.module.scss';
 
 export type LoaderProps = React.HTMLAttributes<HTMLSpanElement>;
 
