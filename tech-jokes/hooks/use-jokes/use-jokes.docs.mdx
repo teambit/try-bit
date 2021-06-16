@@ -4,10 +4,8 @@ labels: ['react', 'hook', 'jokes']
 ---
 
 import { useEffect } from 'react';
-import { useJokes } from './use-jokes'
+import { useJokes } from './use-jokes';
 import styles from './use-jokes-docs.module.scss';
-
-> This is the documentation for the 'use-jokes' component (hook). It uses MDX to combine JSX with Markdown.
 
 ### use-jokes returns an array with the following:
 
@@ -19,11 +17,9 @@ import styles from './use-jokes-docs.module.scss';
 6. A function that saves a joke in the local storage `(joke: string, callback?: () => any) => void`
 7. A function that removes a joke from the local storage `(joke: string, callback?: () => any) => void`
 
-### Using the useJokes hook
+### Using the useJokes hook (live playground)
 
 #### Toggle between local and remote jokes using the 'local' prop.
-
-> This is a live playground. Adding `live` to your codeblock turns it into a live playground.
 
 ```jsx live
 // Assign 'true' to the 'local' prop, to switch to locally stored jokes.
@@ -69,8 +65,3 @@ import styles from './use-jokes-docs.module.scss';
 ```
 
 <br />
-
-> Below is a composition for the 'use-jokes' component (embedded in the docs by the environment's doc template).  
-> This composition validates that the 'use-jokes' allows to toggle between stored jokes and remote jokes.  
-> That's our way to ensure we deliver a component than behaves "as promised" when consumed by others.  
-> Explore it further in the 'Compositions' tab.

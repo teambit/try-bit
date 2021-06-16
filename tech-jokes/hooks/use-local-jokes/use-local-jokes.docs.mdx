@@ -14,6 +14,8 @@ import styles from './use-local-jokes-docs.module.scss';
 4. A function that saves a joke in the localStorage `(joke: string, callback?: () => any) => void`
 5. A function that removes a joke from the localStorage `(joke: string, callback?: () => any) => void`
 
+### Using the useLocalJokes hook (live playground):
+
 ```jsx live
 () => {
   const [getJoke, joke, error, saveJoke, removeJoke] = useLocalJokes();
@@ -31,13 +33,17 @@ import styles from './use-local-jokes-docs.module.scss';
         <button className={styles.button} disabled={!!error} onClick={getJoke}>
           {'next joke'}
         </button>
-        <button className={styles.button} 
+        <button
+          className={styles.button}
           variant="secondary"
           onClick={() => saveJoke(jokeExample, getJoke)}
         >
           {'save joke'}
         </button>
-        <button className={styles.button}  onClick={() => removeJoke(joke, getJoke)}>
+        <button
+          className={styles.button}
+          onClick={() => removeJoke(joke, getJoke)}
+        >
           {'remove joke'}
         </button>
       </div>

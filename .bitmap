@@ -5,43 +5,43 @@
         "scope": "our-org.tech-jokes",
         "version": "0.0.3",
         "mainFile": "index.ts",
-        "rootDir": "components/hooks/use-jokes"
+        "rootDir": "tech-jokes/hooks/use-jokes"
     },
     "hooks/use-local-jokes": {
         "scope": "our-org.tech-jokes",
         "version": "0.0.3",
         "mainFile": "index.ts",
-        "rootDir": "components/hooks/use-local-jokes"
+        "rootDir": "tech-jokes/hooks/use-local-jokes"
     },
     "hooks/use-remote-jokes": {
         "scope": "our-org.tech-jokes",
         "version": "0.0.3",
         "mainFile": "index.ts",
-        "rootDir": "components/hooks/use-remote-jokes"
+        "rootDir": "tech-jokes/hooks/use-remote-jokes"
     },
     "ui/elements/app-bar": {
         "scope": "our-org.tech-jokes",
         "version": "0.0.2",
         "mainFile": "index.ts",
-        "rootDir": "components/ui/elements/app-bar"
+        "rootDir": "tech-jokes/ui/elements/app-bar"
     },
     "ui/elements/button": {
         "scope": "our-org.tech-jokes",
         "version": "0.0.2",
         "mainFile": "index.ts",
-        "rootDir": "components/ui/elements/button"
+        "rootDir": "tech-jokes/ui/elements/button"
     },
     "ui/elements/dots-loader": {
         "scope": "teambit.teaching",
         "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "teambit.teaching/ui/elements/dots-loader"
+        "rootDir": "teaching/ui/elements/dots-loader"
     },
     "ui/widgets/tech-jokes-viewer": {
         "scope": "our-org.tech-jokes",
         "version": "1.0.2",
         "mainFile": "index.ts",
-        "rootDir": "components/ui/widgets/tech-jokes-viewer"
+        "rootDir": "tech-jokes/ui/widgets/tech-jokes-viewer"
     },
-    "version": "1.0.29"
+    "$schema-version": "14.9.0"
 }

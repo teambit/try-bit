@@ -12,6 +12,8 @@ import styles from './use-remote-jokes-docs.module.scss';
 3. A boolean that signifies whether the fetch promise has been resolved `boolean`
 4. An error message `string`
 
+### Using the useRemoteJokes hook (live playground):
+
 ```jsx live
 () => {
   const [getJoke, joke, isLoading, error] = useRemoteJokes();
@@ -25,7 +27,10 @@ import styles from './use-remote-jokes-docs.module.scss';
       {error || joke}
       <div className={styles.buttonsWrapper}>
         <button
-          className={styles.button} isLoading={isLoading} onClick={getJoke}>
+          className={styles.button}
+          isLoading={isLoading}
+          onClick={getJoke}
+        >
           {'another joke'}
         </button>
       </div>
